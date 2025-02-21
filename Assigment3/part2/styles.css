@@ -6,7 +6,15 @@ html {
  div {
   width: 200px; 
   height: 200px; 
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e00404;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black;
+  font-size: 18px
+  font-weight: bold;
+  border-radius: 8px;
   border: 1px solid #c62839; 
   margin: 50px auto;
  
