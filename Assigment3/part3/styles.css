@@ -105,4 +105,58 @@ nav li{
   background-color: rgba(202, 76, 76, 0.205);
 }
 
+p:nth-of-type(1), p:nth-of-type(3){
+  text-indent: 20px;
+}
+
+a {
+  text-decoration: underline; 
+  color: #a66;
+  position: relative;
+}
+
+a:hover, a:focus {
+  color: #822;
+  text-decoration: none;
+}
+
+a:visited {
+  color: goldenrod;
+}
+
+a:active{
+  font-style: oblique;
+  background-color: lightcoral;
+  color: black;
+}
+
+aside li{
+  line-height: 200%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li{
+  color: chartreuse;
+  border: 2px solid #a66;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  background-color: rgba(202, 76, 76, 0.205);
+}
+
+
+a[href^="https"]:nth-of-type(-n+4)::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background-size: contain;
+  background-image: url('external-link-52.png');
+}
 
