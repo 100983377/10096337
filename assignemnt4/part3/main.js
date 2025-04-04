@@ -69,3 +69,19 @@ class Ball {
 
 const balls = [];
 
+while (balls.length < 25) {
+  const size = random(10, 20);
+  const ball = new Ball(
+    random(size, canvas.width - size),
+    random(size, canvas.height - size),
+    random(-7, 7) || 1,
+    random(-7, 7) || 1,
+    randomRGB(),
+    size
+  );
+
+  balls.push(ball);
+}
+
+console.log("Balls array:", balls);
+
