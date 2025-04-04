@@ -41,22 +41,26 @@ GithubLink:https://github.com/100983377/10096337
       }
     </style>
   </head>
+  <body>  
+    <div>  
+      <label for="customname">Enter custom name:</label>  
+      <input id="customname" type="text" placeholder="">  
+    </div>  
 
-  <body>
-    <div>
-      <label for="customname">Enter custom name:</label>
-      <input id="customname" type="text" placeholder="" />
-    </div>
-    <div>
-      <label for="us">US</label
-      ><input id="us" type="radio" name="ukus" value="us" checked />
-      <label for="uk">UK</label
-      ><input id="uk" type="radio" name="ukus" value="uk" />
-    </div>
-    <div>
-      <button class="randomize">Generate random story</button>
-    </div>
-    <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
-    <p class="story"></p>
-  </body>
+    <div>  
+      <label for="us">US</label>  
+      <input id="us" type="radio" name="ukus" value="us" checked>  
+      <label for="uk">UK</label>  
+      <input id="uk" type="radio" name="ukus" value="uk">  
+    </div>  
+
+    <div>  
+      <button id="randomize">Generate random story</button>  
+    </div>  
+
+    <p id="story">Text Area</p>  
+
+    <script src="main.js"></script>  
+  </body>  
+</html>  
 </html>
