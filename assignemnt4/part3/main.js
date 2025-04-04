@@ -85,3 +85,18 @@ while (balls.length < 25) {
 
 console.log("Balls array:", balls);
 
+function loop() {
+  console.log("Animation loop running...");
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect(balls);
+  }
+
+  requestAnimationFrame(loop);
+}
+
+loop();
