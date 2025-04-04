@@ -4,6 +4,13 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
+let images = [
+    "",
+    "./images/pic2.jpg",
+    "./images/pic3.jpg",
+    "./images/pic4.jpg",
+    "./images/pic5.jpg"
+]
 
 /* Looping through images */
 
