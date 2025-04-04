@@ -11,7 +11,12 @@ let images = [
     "./images/pic4.jpg",
     "./images/pic5.jpg"
 ]
-
+let imageAlt = [
+    "Image1",
+    "Image2",
+    "Image3",
+    "Image4",
+    "Image5" ]
 /* Looping through images */
 
 const newImage = document.createElement('img');
