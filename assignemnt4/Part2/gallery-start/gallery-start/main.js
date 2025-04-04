@@ -4,24 +4,20 @@ const thumbBar = document.querySelector('.thumb-bar');
 const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
-let images = [
-    "",
-    "./images/pic2.jpg",
-    "./images/pic3.jpg",
-    "./images/pic4.jpg",
-    "./images/pic5.jpg"
-]
-let imageAlt = [
-    "Image1",
-    "Image2",
-    "Image3",
-    "Image4",
-    "Image5" ]
-/* Looping through images */
+let images = [  
+    "./images/pic1.jpg",  
+    "./images/pic2.jpg",  
+    "./images/pic3.jpg",  
+    "./images/pic4.jpg",  
+    "./images/pic5.jpg"  
+];  
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+let imageAlt = [  
+    "Close eye eye",  
+    "Rocks",  
+    "Purple and white flowers",  
+    "Ancient Egyptian hieroglyphs",  
+    "Butterfly on a leaf"  
+];  
 
-/* Wiring up the Darken/Lighten button */
+/* Looping through images */  
