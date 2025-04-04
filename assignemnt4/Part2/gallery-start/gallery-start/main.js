@@ -20,21 +20,21 @@ let imageAlt = [
     "Butterfly on a leaf"  
 ];  
 
-/* Looping through images */  
+ 
 for (let i = 0; i < images.length; i++) {  
     const newImage = document.createElement("img");  
     newImage.setAttribute("src", images[i]);  
     newImage.setAttribute("alt", imageAlt[i]);  
     thumbBar.appendChild(newImage);  
 
-    // Event listener to update the displayed image when a thumbnail is clicked
+   
     newImage.addEventListener("click", function () {  
         displayedImage.setAttribute("src", images[i]);  
         displayedImage.setAttribute("alt", imageAlt[i]);  
     });  
 }  
 
-/* Wiring up the Darken/Lighten button */  
+ 
 btn.addEventListener("click", function () {  
     if (btn.getAttribute("class") === "dark") {  
         btn.setAttribute("class", "light");  
