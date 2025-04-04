@@ -22,3 +22,43 @@ let insertz = [
     "turned into a slug and crawled away"  
 ];  
 
+randomize.addEventListener("click", result);  
+
+function result() {  
+    let xItem = randomValueFromArray(insertX);  
+    let yItem = randomValueFromArray(inserty);  
+    let zItem = randomValueFromArray(insertz);  
+
+    let newStory = storyText;  
+    newStory = newStory.replaceAll(":insertx:", xItem);  
+    newStory = newStory.replace(":inserty:", yItem);  
+    newStory = newStory.replace(":insertz:", zItem);  
+
+    if (customName.value !== "") {  
+        const name = customName.value;  
+        newStory = newStory.replace("Bob", name);  
+    }  
+
+    if (document.getElementById("uk").checked) {  
+        const weight = Math.round(pndToStone(300)) + " stone";  
+        const temperature = Math.round(farToCelcius(94)) + " centigrade";  
+        newStory = newStory.replace("300 pounds", weight);  
+        newStory = newStory.replace("94 fahrenheit", temperature);  
+    }  
+
+    story.innerText = newStory;  
+    story.style.visibility = "visible";  
+}  
+
+function pndToStone(value) {  
+    return value * 0.0714286;  
+}  
+
+function farToCelcius(value) {  
+    return (value - 32) * (5 / 9);  
+}  
+
+function randomValueFromArray(array) {  
+    const random = Math.floor(Math.random() * array.length);  
+    return array[random];  
+}  
