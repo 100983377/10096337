@@ -5,6 +5,14 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
+const counter = document.createElement("p");
+counter.style.position = "absolute";
+counter.style.top = "10px";
+counter.style.left = "10px";
+counter.style.color = "white";
+counter.style.fontSize = "20px";
+document.body.appendChild(counter);
+
 // function to generate random number
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -144,6 +152,11 @@ while (balls.length < 25) {
 const evilCircle = new EvilCircle(width / 2, height / 2);
 evilCircle.setControls();
 
+function updateCounter() {
+  const remainingBalls = balls.filter(ball => ball.exists).length;
+  counter.textContent = `Balls Remaining: ${remainingBalls}`;
+}
+
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
@@ -157,6 +170,8 @@ function loop() {
   evilCircle.draw();
   evilCircle.checkBounds();
   evilCircle.collisionDetect(balls);
+
+  updateCounter();
 
   requestAnimationFrame(loop);
 }
