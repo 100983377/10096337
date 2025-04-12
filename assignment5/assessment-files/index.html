@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -114,7 +114,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <div class="show-hide" role="button" aria-expanded="false">Show comments</div>
 
           <div class="comment-wrapper">
 
@@ -122,13 +122,14 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
-                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <label for="name">Your name:</label>
+              <input type="text" name="name" id="name" placeholder="Enter your name">
+
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment">Your comment:</label>
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
-              </div>
+               </div>
               <div>
                 <input type="submit" value="Submit comment">
               </div>

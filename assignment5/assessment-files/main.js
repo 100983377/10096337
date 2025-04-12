@@ -7,14 +7,13 @@ commentWrapper.style.display = 'none';
 
 showHideBtn.onclick = function() {
   let showHideText = showHideBtn.textContent;
-  if(showHideText === 'Show comments') {
-    showHideBtn.textContent = 'Hide comments';
-    commentWrapper.style.display = 'block';
-  } else {
-    showHideBtn.textContent = 'Show comments';
-    commentWrapper.style.display = 'none';
-  }
+  let isExpanded = showHideText === 'Show comments';
+  
+  showHideBtn.textContent = isExpanded ? 'Hide comments' : 'Show comments';
+  commentWrapper.style.display = isExpanded ? 'block' : 'none';
+  showHideBtn.setAttribute('aria-expanded', isExpanded);
 };
+
 
 // functionality for adding a new comment via the comments form
 
